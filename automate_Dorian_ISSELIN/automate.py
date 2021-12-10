@@ -59,8 +59,7 @@ def verif_phrase(phrase):
                 mot = mot.lower()
                 if mot in dictionnaire.keys():
                     etat = TableTransition[etat][dictionnaire[mot]]
-                if etat == 8 or etat == 9:
-                    #en cas d'etat final ou d'erreur on stop la boucle 
+                if etat == 8:
                     break
         else:
             print("la phrase n'est pas fini par un point ou vide")
@@ -70,4 +69,4 @@ def verif_phrase(phrase):
     if etat == 9:
         print("La phrase est OK")
     elif etat == 8:
-        print("La phrase est NUL")
+        print("La phrase est NULLE")
